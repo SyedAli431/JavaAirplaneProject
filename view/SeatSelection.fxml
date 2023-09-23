@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SeatSelectionController">
+   <children>
+      <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Seat Selection" textFill="WHITE">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="44.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <HBox fx:id="seatSelectionPane" alignment="CENTER" prefHeight="100.0" prefWidth="347.0" />
+            <VBox>
+               <children>
+                  <Label text="Legend: " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font></Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" spacing="5.0">
+                     <children>
+                        <Circle fill="#ff8c00" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label text="Selected" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="300.0" spacing="5.0">
+                     <children>
+                        <Circle fill="GREEN" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label prefHeight="17.0" text="Economy" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font></Label>
+                        <Label text="\$234.99" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" spacing="5.0">
+                     <children>
+                        <Circle fill="#008cffea" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label prefHeight="17.0" text="First Class" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font></Label>
+                        <Label prefHeight="17.0" text="\$311.99" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" spacing="5.0">
+                     <children>
+                        <Circle fill="RED" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label text="Occupied" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="460.0" spacing="20.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" spacing="5.0">
+         <children>
+            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutY="1.0" prefHeight="25.0" prefWidth="200.0" />
+                  <Label fx:id="lblPassengerRemain" maxWidth="1.7976931348623157E308" prefHeight="35.0" text="Remaining Passengers: " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="0.0" prefWidth="241.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" layoutX="41.0" layoutY="-1.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="29.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnBack" mnemonicParsing="false" onAction="#backPressed" prefHeight="31.0" prefWidth="79.0" style="-fx-background-radius: 30; -fx-background-color: #b5b5b5ff;" text="Back" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnNext" mnemonicParsing="false" onAction="#submit" prefHeight="31.0" prefWidth="79.0" style="-fx-background-radius: 30; -fx-background-color: #ff7700ff;" text="Next" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
